@@ -1,4 +1,4 @@
-class SightingsController < ApplicationController
+class SightingsController < OpenReadController
   before_action :set_sighting, only: [:show, :update, :destroy]
 
   # GET /sightings
@@ -15,7 +15,8 @@ class SightingsController < ApplicationController
 
   # POST /sightings
   def create
-    @sighting = Sighting.new(sighting_params)
+    # @sighting = Sighting.new(sighting_params)
+    @sighting = current_user.sightings.build(sighting_params)
 
     if @sighting.save
       render json: @sighting, status: :created, location: @sighting
@@ -39,9 +40,11 @@ class SightingsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_sighting
-      @sighting = Sighting.find(params[:id])
+      # @sighting = Sighting.find(params[:id])
+      @sighting = current_user.sightings.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
