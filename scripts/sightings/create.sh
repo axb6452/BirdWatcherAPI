@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/sightings/" \
+curl "https://glacial-woodland-13268.herokuapp.com/sightings" \
 --include \
 --request POST \
 --header "Content-type: application/json" \

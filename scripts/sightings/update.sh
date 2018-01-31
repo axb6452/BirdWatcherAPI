@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl --include --request PATCH "http://localhost:4741/sightings/${ID}" \
+curl --include --request PATCH "https://glacial-woodland-13268.herokuapp.com/sightings/${ID}" \
 --header "Content-type: application/json" \
 --data '{
   "sighting": {
