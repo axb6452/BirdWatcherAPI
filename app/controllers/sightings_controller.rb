@@ -4,7 +4,7 @@ class SightingsController < OpenReadController
 
   # GET /sightings
   def index
-    @sightings = Sighting.all
+    @sightings = Sighting.order(id: :desc)
 
     render json: @sightings
   end
