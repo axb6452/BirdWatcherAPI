@@ -1,5 +1,6 @@
 class SightingsController < OpenReadController
-  before_action :set_sighting, only: [:show, :update, :destroy]
+  before_action :set_sighting, only: [:update, :destroy]
+  before_action :authenticate, only: [:create, :update, :destroy]
 
   # GET /sightings
   def index
@@ -10,7 +11,8 @@ class SightingsController < OpenReadController
 
   # GET /sightings/1
   def show
-    render json: @sighting
+    # render json: @sighting
+    render json: Sighting.find(params[:id])
   end
 
   # POST /sightings
@@ -38,8 +40,6 @@ class SightingsController < OpenReadController
   def destroy
     @sighting.destroy
   end
-
-  private
 
     # Use callbacks to share common setup or constraints between actions.
     def set_sighting

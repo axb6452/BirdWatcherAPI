@@ -1,7 +1,10 @@
 #!/bin/bash
 
-curl --include --request POST "http://localhost:4741/sightings/" \
+curl "http://localhost:4741/sightings/" \
+--include \
+--request POST \
 --header "Content-type: application/json" \
+--header "Authorization: Token token=${TOKEN}" \
 --data '{
   "sighting": {
     "bird": "'"${BIRD}"'",
