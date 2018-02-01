@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20180126210257) do
   end
 
   create_table "sightings", force: :cascade do |t|
-    t.string "bird", null: false
-    t.string "characteristics", null: false
-    t.string "body_color", null: false
+    t.text "bird", null: false
+    t.text "characteristics", null: false
+    t.text "body_color", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
