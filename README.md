@@ -1,17 +1,21 @@
-Application
+# The Bird Tracker - API
 
-The back end API of the Bird Tracker project, built using Ruby on Rails. Contains the MVC layer performing CRUD operations on a PostgreSQL database. Client Repo - https://github.com/axb6452/BirdWatcherClient
+## Application
 
-Technologies Used:
+The back end API of the Bird Tracker project, built using Ruby on Rails. Contains the MVC layer performing CRUD operations on a PostgreSQL database. Client Repo: https://github.com/axb6452/BirdWatcherClient
+
+## Technologies Used:
 
 - Ruby
 - Rails Framework
+- Heroku cloud hosting application
+- PostgreSQL database
 
-Unsolved Problems:
+## Unsolved Problems:
 
-1) Encountered previous migration issue after deploying master code to heroku. Had to reset heroku database using $ heroku pg:reset DATABASE_URL. Successive heroku database migrations were fruitful, resulting in the correct table structure for each resource.
+1) None - Encountered previous migration issue after deploying master code to heroku. Had to reset heroku database using $ heroku pg:reset DATABASE_URL. Successive heroku database migrations were fruitful, resulting in the correct table structure for each resource.
 
-Planning:
+## Planning, Process and Problem Solving:
 
 1) Set up Rails API template and Heroku cloud application based on documentation guidelines.
 2) Scaffolded sighting layers based on MVP requirements.
@@ -23,12 +27,13 @@ Planning:
 8) create_sightings migration contains user_id field as a foreign key constraint that references user table.
 9) Ran database migrations on rails, before deploying to heroku, and running heroku database migrations. Restarted heroku application to ensure deployed code is refreshed.
 
-Problem solving:
-
 I worked primarily on the MVP. Therefore, I did not encounter too many issues after scaffolding the MVC layers. However, I would reference documentation on the MVC structure when I ran into issues and also use online forums, such as stack overflow to resolve commonplace issues. I posted an issue on the Full Stack project issues queue when I ran into internal server issues during heroku deployment.
 
+### ERD
+
+https://drive.google.com/open?id=1gYBmZfDRFBoBBCje2rJU9zqGxMSAGESQ
+
+### Deployed Paths
+
 Server Deployed Path: https://glacial-woodland-13268.herokuapp.com
-
 Client Deployed Path: https://axb6452.github.io/BirdWatcherClient
-
-ERD: https://drive.google.com/open?id=1gYBmZfDRFBoBBCje2rJU9zqGxMSAGESQ
